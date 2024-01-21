@@ -1,0 +1,96 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(225, 138, 24);
+}
+
+.container{
+    width: 300px;
+    margin:100px auto 0;
+
+}
+
+.select-option{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.select-option i{
+    font-size: 25px;
+    transition: all 0.3s linear;
+}
+
+.container.active .select-option i {
+    transform: rotate(-180deg);
+}
+
+.list-section{
+    background-color: white;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+}
+
+
+.container.active .list-section{
+    display: block;
+}
+
+.search-input{
+    position: relative;
+}
+
+.search-input i{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 15px;
+    color: black;
+}
+
+.search-input input{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    padding-left: 45px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-input input:focus{
+    border: 2px solid #000000;
+}
+
+.list{
+    margin-top: 10px;
+    max-height: 250px;
+    overflow: auto;
+    padding-right: 7px;
+}
+
+.list li{
+    font-size: 20px;
+    height: 50px;
+    padding: 10px 15px;
+}
+
+.list li:hover, li.selected{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
